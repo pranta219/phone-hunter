@@ -1,14 +1,15 @@
+// Phone Search Field//
 let searchPhone = () => {
     let searchField = document.getElementById('input');
     let searchText = searchField.value;
-    // console.log(searchText);
+
     let error = document.getElementById('error');
 
     searchField.value = '';
     if (searchText != "") {
         let url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
 
-        // console.log(url);
+
         fetch(url)
             .then(res => res.json())
             .then(search => displaySearchResult(search.data))
@@ -19,15 +20,16 @@ let searchPhone = () => {
     }
 }
 
+// Phone Search Result//
 let displaySearchResult = data => {
-    // let smallSlice = data.slice(0, 20)
+
     let SearchResult = document.getElementById('search-result');
     SearchResult.innerHTML = '';
     let emptySeach = document.getElementById('empty-search');
     let textSomething = document.getElementById('text');
     if (data.length != 0) {
         data.forEach(data => {
-            // console.log(data);
+
             let div = document.createElement('div');
             div.classList.add('col');
             div.innerHTML = `<div class="card shadow-lg p-2 mb-4">
@@ -49,8 +51,9 @@ let displaySearchResult = data => {
     }
 }
 
+// Phone Details Show//
 let phoneDetail = phoneId => {
-    // console.log(phoneId);
+
 
     let url = `https://openapi.programming-hero.com/api/phone/${phoneId}`;
 
@@ -59,7 +62,7 @@ let phoneDetail = phoneId => {
         .then(detail => displayPhoneDetail(detail.data))
 }
 let displayPhoneDetail = phone => {
-    // console.log(phone)
+
 
     let mainDiv = document.getElementById('phone-details')
     mainDiv.textContent = "";
