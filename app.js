@@ -20,6 +20,7 @@ let searchPhone = () => {
 }
 
 let displaySearchResult = data => {
+    // let smallSlice = data.slice(0, 20)
     let SearchResult = document.getElementById('search-result');
     SearchResult.innerHTML = '';
     let emptySeach = document.getElementById('empty-search');
@@ -29,7 +30,7 @@ let displaySearchResult = data => {
             // console.log(data);
             let div = document.createElement('div');
             div.classList.add('col');
-            div.innerHTML = `<div class="card">
+            div.innerHTML = `<div class="card shadow-lg p-2 mb-4">
                 <img src="${data.image}" class="card-img-top img-width" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${data.phone_name}</h5>
@@ -71,13 +72,14 @@ let displayPhoneDetail = phone => {
         <h6>Storage: ${phone.mainFeatures.storage}</h6>
         <h6>Display: ${phone.mainFeatures.displaySize}</h6>
         <h6>Chipset: ${phone.mainFeatures.chipSet}</h6>
-        <h6 class="card-text">Memory: ${phone.mainFeatures.memory}</h6>
-        <h6 class="card-text">Wlan: ${phone.others.WLAN}</h6>
-        <h6 class="card-text">Bluetooth: ${phone.others.Bluetooth}</h6>
-        <h6 class="card-text">GPS: ${phone.others.GPS}</h6>
-        <h6 class="card-text">NFC: ${phone.others.NFC}</h6>
-        <h6 class="card-text">Radio: ${phone.others.Radio}</h6>
-        <h6 class="card-text">USB: ${phone.others.USB}</h6>
+        <h6>Sensors: ${phone.mainFeatures.sensors}</h6>
+        <h6>Memory: ${phone.mainFeatures.memory}</h6>
+        <h6>Wlan: ${phone.others.WLAN}</h6>
+        <h6>Bluetooth: ${phone.others.Bluetooth}</h6>
+        <h6>GPS: ${phone.others.GPS}</h6>
+        <h6>NFC: ${phone.others.NFC}</h6>
+        <h6>Radio: ${phone.others.Radio}</h6>
+        <h6>USB: ${phone.others.USB}</h6>
        
     </div>
     `;

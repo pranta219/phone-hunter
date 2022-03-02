@@ -1,13 +1,21 @@
-
+.font{
+  font-size: 50px;
+}
 .img-width{
-    width: 90%!important;
+    width: 80%!important;
     margin: 0 auto;
 }
-.card{
-    padding: 10px;
-    text-align: center;
+.icon{
+  color: #BAACD8;
 }
-
+.card{
+    margin-left: 20px;
+    text-align: center;
+    border-radius: 2.25rem!important;
+}
+.card-img-top {
+  width: 80%;
+}
 .width{
     width: 300px;
     margin-bottom: 30px;
@@ -22,7 +30,7 @@
   }
 
   .text {
-    /* margin-top: 212px; */
+
     font-size: 60px;
     color: transparent;
     background: conic-gradient(
@@ -37,7 +45,7 @@
     -webkit-background-clip: text;
   
     animation: expand-rev 0.5s ease forwards;
-  
+
     cursor: pointer;
   }
   
